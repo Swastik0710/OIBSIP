@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgb(204, 93, 115) 0%, rgb(126, 197, 160) 100%, rgba(0, 212, 255, 1) 100%);
+    background-repeat: no-repeat;
+    color: #441098;
+    transition: background-image 0.5s ease;
+}
+
+.container {
+    background: rgba(255, 111, 9, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 85%;
+    max-width: 800px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.5s ease;
+}
+
+.heading {
+    font-size: 32px;
+    transition: color 0.5s ease;
+}
+
+.temp-container {
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.5s ease;
+}
+
+input {
+    width: 60%;
+    padding: 5px;
+    outline: none;
+    background: rgba(0, 212, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: darkblue;
+    font-size: 18px;
+    transition: background 0.5s ease;
+}
+
+input::placeholder {
+    color: rgb(14, 21, 17);
+}
+
+.convert-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0d5370;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.convert-btn:hover {
+    background-color: #600c55;
+    transform: scale(1.1);
+    color: #f9f9f9; /* Changes text color on hover */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes changeBackground {
+    0% {
+        background: rgba(255, 111, 9, 0.3);
+    }
+    50% {
+        background: rgba(31, 249, 154, 0.3);
+    }
+    100% {
+        background: rgba(255, 111, 9, 0.3);
+    }
+}
+
+.container:hover {
+    animation-name: changeBackground;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
