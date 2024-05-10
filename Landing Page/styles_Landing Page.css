@@ -1,0 +1,201 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/free-vector/gradient-golden-linear-background_23-2148957913.jpg?w=996&t=st=1712936749~exp=1712937349~hmac=d8e4a05a4b566b4e3c4fd0f56cb1701533a9921f8867c2f888354f32429cb907'); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundAnimation 20s infinite linear;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Header styles */
+header {
+    background-color: rgba(255, 152, 0, 0.9); /* Orange with opacity */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    animation: fadeInUp 1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+nav ul li a:hover {
+    background-color: #ffcc80; /* Lighter orange */
+    transform: scale(1.05); /* Scale up on hover */
+    animation: bounce 0.5s infinite alternate; /* Added bounce animation on hover */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Main content styles */
+section {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for sections */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease; /* Added color transition */
+}
+
+h1:hover,
+h2:hover {
+    color: #fc020296; /* Dark Red on hover */
+    transform: rotate(5deg); /* Rotate slightly on hover */
+}
+
+/* Colorful text styles */
+#about-me p {
+    color: #ff0088; /* Pinkish Red on hover */
+    animation: fadeInLeft 1s ease;
+    transition: color 0.3s ease; /* Added color transition */
+}
+
+#about-me p:hover {
+    color: #f00; /* Red on hover */
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+#services h2 {
+    color: #af514c; /* Brownish Orange */
+    animation: fadeInRight 1s ease;
+    transition: color 0.3s ease; /* Added color transition */
+}
+
+#services h2:hover {
+    color: #f00; /* Red on hover */
+    transform: translateY(-5px); /* Move up on hover */
+}
+
+#contact p {
+    color: #2196f3; /* Light Blue */
+    animation: fadeInUp 1s ease;
+    transition: color 0.3s ease; /* Added color transition */
+}
+
+#contact p:hover {
+    color: #0f0; /* Green on hover */
+    transform: rotate(3deg); /* Rotate slightly on hover */
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4c5baf; /* Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    animation: pulse 2s infinite;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05); /* Scale up on hover */
+    animation: pulseHover 1s infinite, moveRight 1s forwards; /* Added hover animation and moveRight animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulseHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(10px);
+    }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(51, 51, 51, 0.9); /* Dark gray footer background */
+    color: #fff;
+    animation: slideInUp 1s ease;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
